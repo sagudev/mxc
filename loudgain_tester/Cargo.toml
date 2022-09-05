@@ -1,0 +1,28 @@
+[package]
+name = "loudgain_tester"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+loudgain = { path = "../loudgain" }
+loudgainer = { path = "../loudgainer" }
+mxc = { path = "../mxc" }
+# reading loudgain results
+csv = "1.1"
+serde = { version = "1.0", features = ["derive"] }
+# seting temp dirs
+tempfile = "3"
+thiserror = "1.0"
+# checksum
+data-encoding = "2"
+ring = "0.16"
+# multi-run
+num_cpus = "1"
+rayon = "1"
+# opts
+gumdrop = { version = "0.8", features = ["default_expr"] }
+# TUI
+indicatif = { version = "0.17", features = ["rayon"] }
+console = "0.15"

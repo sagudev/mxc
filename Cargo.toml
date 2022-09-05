@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+
+members = [
+    # Music Computator
+    "mxc",
+    # TagLib build-script for use with Cargo
+    "taglib",
+    # modified tag module from Moonbase59/loudgain
+    "taglibxx",
+    # loudgain bin wrapped in Rust. (Allows install with Cargo and calling loudgain binary from Rust)
+    "loudgain",
+    # loudgainer
+    "loudgainer",
+    # loudgainer tester against loudgain
+    "loudgain_tester",
+]

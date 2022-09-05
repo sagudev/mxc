@@ -1,0 +1,53 @@
+[package]
+name = "mxc"
+version = "0.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = []
+# Build ffmpeg instead of using the host's.
+build-ffmpeg = ["ffmpeg-next/build"]
+ffmpeg-static = ["ffmpeg-next/static"]
+static = ["ffmpeg-static"]
+
+[lib]
+name = "mxc"
+path = "src/lib.rs"
+
+[dependencies]
+# logging
+log = "0.4"
+env_logger= "0.9"
+# errors
+thiserror = "1.0"
+#
+# libebur128 for RG2
+ebur128 = { version = "0.1", features = ["precision-true-peak"] }
+# dr meter
+drmeter = { git="https://github.com/sagudev/drmeter" }
+# fftag
+ffmpeg-next = "5.0.3"
+taglibxx = {path = "../taglibxx"}
+#
+#
+# rtag
+#lofty = "0.8"
+#symphonia = { version="0.5", features = ["mp3", "aac", "alac", "isomp4"] }
+# rtag-specialized
+#claxon
+#metaflac
+#
+#
+# walker
+npath = { git = "https://github.com/gdzx/npath" }
+# binary
+# multi-run
+num_cpus = "1"
+rayon = "1"
+# opts
+gumdrop = { version = "0.8", features = ["default_expr"] }
+# TUI
+indicatif = { version = "0.17", features = ["rayon"] }
+console = "0.15"

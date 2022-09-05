@@ -1,0 +1,24 @@
+[package]
+name = "taglibxx"
+links = "tag"
+build = "build.rs"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2"
+cxx = "1.0"
+
+[build-dependencies]
+cxx-build = "1.0"
+cc         = "1.0"
+taglib = {path = "../taglib"}
+
+[features]
+default = ["taglib112"]
+static = ["taglib/static"]
+taglib112 = ["taglib/taglib112", "static"]
+taglib1xx = ["taglib/taglib1xx", "static"]

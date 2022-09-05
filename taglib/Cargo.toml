@@ -1,0 +1,21 @@
+[package]
+name = "taglib"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pkg-config = "0.3"
+cmake = "0.1"
+
+[target.'cfg(target_env = "msvc")'.build-dependencies]
+vcpkg = "0.2"
+
+[features]
+default = []
+static = []
+build  = ["static"]
+taglib112 = ["build"]
+taglib1xx = ["build"]

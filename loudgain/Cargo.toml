@@ -1,0 +1,21 @@
+[package]
+name = "loudgain"
+version = "0.0.0"
+edition = "2021"
+build = "build.rs"
+
+[build-dependencies]
+cc = "1"
+cmake = "0.1"
+directories = "4"
+taglib = { path = "../taglib" }
+
+[features]
+default = ["taglib112"]
+static = ["taglib/static"]
+taglib112 = ["taglib/taglib112"]
+taglib1xx = ["taglib/taglib1xx"]
+# rust ebur
+ebur128 = []
+# verbose float
+float = []
