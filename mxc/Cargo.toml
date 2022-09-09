@@ -26,10 +26,10 @@ thiserror = "1.0"
 # libebur128 for RG2
 ebur128 = { version = "0.1", features = ["precision-true-peak"] }
 # dr meter
-drmeter = { git="https://github.com/sagudev/drmeter" }
+drmeter = { git = "https://github.com/sagudev/drmeter" }
 # fftag
 ffmpeg-next = "5.0.3"
-taglibxx = {path = "../taglibxx"}
+taglibxx = { path = "../taglibxx" }
 #
 #
 # rtag
