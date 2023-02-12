@@ -9,6 +9,7 @@ It compute music:
 - [ ] Checksum (FLAC only)
 - [ ] BPM
 - [ ] Chromaprint (fingerprint)
+- [ ] Path & filename structure
 
 ## Install
 
