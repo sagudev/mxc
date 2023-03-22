@@ -18,6 +18,6 @@ jobs:
         sudo add-apt-repository ppa:savoury1/ffmpeg4 -y
         sudo add-apt-repository ppa:savoury1/ffmpeg5 -y
         sudo apt update
-        sudo apt install -y ffmpeg zlib libavfilter-dev libswresample-dev libavdevice-dev libavcodec-dev libavformat-dev libavutil-dev pkg-config
+        sudo apt install -y ffmpeg zlib1g libavfilter-dev libswresample-dev libavdevice-dev libavcodec-dev libavformat-dev libavutil-dev pkg-config
     - name: Build
       run: cargo build --bin mxc --verbose
