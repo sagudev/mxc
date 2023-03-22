@@ -24,14 +24,14 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: mxc_linux
-        path: target/x86_64-unknown-linux-gnu/release/mxc
+        path: target/release/mxc
 
     - name: continuous release
       uses: softprops/action-gh-release@v1
       if: github.ref_name == 'main'
       with:
         prerelease: true
-        files: target/x86_64-unknown-linux-gnu/debug/mxc
+        files: target/release/mxc
         tag_name: continuous
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
